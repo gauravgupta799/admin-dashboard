@@ -1,0 +1,37 @@
+// --------- ProductSans Light -------------
+@font-face{
+    font-family:"productSans-light";
+    src:url("../../fonts/productSans-light/productSans-light.eot");
+    src:url("../../fonts/productSans-light/productSans-light.woff2") format('woff2'),
+    url("../../fonts/productSans-light/productSans-light.woff") format('woff'),
+    url("../../fonts/productSans-light/productSans-light.ttf") format('truetype'),
+    url("../../fonts/productSans-light/productSans-light.svg") format('svg');
+    font-weight:300 !important;
+}
+
+// --------- ProductSans Regular -------------
+@font-face{
+    font-family:"productSans";
+    src:url("../../fonts/productSans-regular/productSans-regular.eot");
+    src:url("../../fonts/productSans-regular/productSans-regular.woff2") format('woff2'),
+    url("../../fonts/productSans-regular/productSans-regular.woff") format('woff'),
+    url("../../fonts/productSans-regular/productSans-regular.ttf") format('truetype'),
+    url("../../fonts/productSans-regular/productSans-regular.svg") format('svg');
+    font-weight:400 !important;
+}
+
+// --------- ProductSans Medium -------------
+@font-face{
+    font-family:"productSans-medium";
+    src:url("../../fonts/productSans-medium/productSans-medium.eot");
+    src:url("../../fonts/productSans-medium/productSans-medium.woff2") format('woff2'),
+    url("../../fonts/productSans-medium/productSans-medium.woff") format('woff'),
+    url("../../fonts/productSans-medium/productSans-medium.ttf") format('truetype'),
+    url("../../fonts/productSans-medium/productSans-medium.svg") format('svg');
+    font-weight:500 !important;
+}
+
+
+$ff-regular:"productSans", sans-serif;
+$ff-light:"productSans-light", sans-serif;
+$ff-medium:"productSans-medium", sans-serif;

@@ -1,0 +1,109 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.footer{
+    padding-block: em(90) em(50);
+    background-color: $clr-light-dark;
+
+    @include breakpoint-sm{
+        padding-block: em(110) em(50);
+    }
+    @include breakpoint-md{
+        padding-block: em(130) em(50);
+    }
+    @include breakpoint-lg{
+        padding-block: em(150) em(50);
+    }
+    @include breakpoint-xl{
+        padding-block: em(165) em(50);
+    }
+    &__title{
+        color:$clr-light-grey;
+        font-size: rem(18);
+    }
+    &__list{
+        font-size: rem(18);
+        margin-top: rem(24);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+    &__link{
+        color:$clr-white-100;
+    }
+    &__form{
+        @include flex-center-vertical;
+        width: 100%;
+    }
+    &__input{
+        @include flex-center;
+        width: 100%;
+        gap: rem(32);
+        border-bottom: 2px solid $clr-grey-50;
+        padding-bottom: em(16);
+        caret-color: $clr-secondary;
+
+        &.border-color{
+            border-color:$clr-secondary;
+        }
+        &.error{
+            border-color: $clr-error;
+        }
+        input{
+            outline: none;
+            border: none;
+            padding: em(15) em(10);
+            @include full-dimensions;
+            font-size: rem(16);
+            background: transparent;
+            color: $clr-white-100;
+            @include breakpoint-lg{
+                font-size: rem(18);
+            }
+        }
+    }
+    &__socials{
+        @include flex-center-vertical;
+        justify-content: flex-start;
+        gap:rem(52);
+        margin-top: rem(44);
+        @include breakpoint-sm{
+            justify-content: flex-end;
+        }
+    }
+    &__secondary{
+        background: $clr-secondary;
+        padding-block: em(16);
+        @include breakpoint-sm{
+            padding-block: em(20);
+        }
+    }
+    &__leftWrapper{
+        @include flex-center-vertical;
+        justify-content: space-between;
+        @include breakpoint-sm{
+            gap: rem(20);
+            justify-content: flex-start;
+        }
+        @include breakpoint-md{
+            gap: rem(32);
+        }
+        @include breakpoint-lg{
+            gap: rem(40);
+        }
+        @include breakpoint-xl{
+            gap: rem(64);
+        }
+        li{
+            text-transform: capitalize;
+            font-weight: 300 !important;
+            line-height: 2.25;
+            color: $clr-primary;
+        }
+    }
+}
+

@@ -6,8 +6,8 @@ $full-width:100%;
 // ========= page container starts =========
 .page-container {
     max-width: none;
-    margin:0 rem(16);
-
+    margin:0 rem(16) !important;
+    
     @include breakpoint-sm{
         margin:0 rem(20);
     }

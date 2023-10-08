@@ -6,21 +6,23 @@
 
 
 .footer{
-    padding-block: em(90) em(50);
-    background-color: $clr-light-dark;
+    // padding-block: em(90) em(50);
+    // background-color: $clr-light-dark;
+    height: 60px;
+    background-color: antiquewhite;
 
-    @include breakpoint-sm{
-        padding-block: em(110) em(50);
-    }
-    @include breakpoint-md{
-        padding-block: em(130) em(50);
-    }
-    @include breakpoint-lg{
-        padding-block: em(150) em(50);
-    }
-    @include breakpoint-xl{
-        padding-block: em(165) em(50);
-    }
+    // @include breakpoint-sm{
+    //     padding-block: em(110) em(50);
+    // }
+    // @include breakpoint-md{
+    //     padding-block: em(130) em(50);
+    // }
+    // @include breakpoint-lg{
+    //     padding-block: em(150) em(50);
+    // }
+    // @include breakpoint-xl{
+    //     padding-block: em(165) em(50);
+    // }
     &__title{
         color:$clr-light-grey;
         font-size: rem(18);
@@ -50,9 +52,9 @@
         &.border-color{
             border-color:$clr-secondary;
         }
-        &.error{
-            border-color: $clr-error;
-        }
+        // &.error{
+        //     border-color: $clr-error;
+        // }
         input{
             outline: none;
             border: none;

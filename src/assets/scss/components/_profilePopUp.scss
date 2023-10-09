@@ -1,0 +1,68 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+.profile{
+    width: rem(240);
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: rgba(58, 53, 65, 0.2) 0px 5px 5px -3px, rgba(58, 53, 65, 0.14) 0px 8px 10px 1px, rgba(58, 53, 65, 0.12) 0px 3px 14px 2px;
+    position: absolute;
+    top: rem(70);
+    right: rem(50);
+    padding-block: 0.8em 0.4em;
+    background: #f5f5f5;
+    &__top{
+        @include flex-center-vertical;
+        gap:1em;
+        padding: 1em;
+        padding-top: 0px;
+        img{
+            width: rem(45);
+            height: rem(45);
+        }
+    }
+    &__titleWrapper{
+        @include flex-cloumn;
+        line-height: 1.4;
+    }
+    &__navLink{
+        display: inline-flex;
+        align-items: center;
+        gap:1rem;
+        opacity: 0.68;
+        letter-spacing: 0.8px;
+    }
+    &__nav-item{
+        display: flex;
+        padding-left: 1em;
+        padding-block: 0.2em;
+        &:hover{
+            text-decoration: none;
+            background-color:$clr-box;
+        }
+        &:last-child{
+            border-top: 1px solid $clr-divider;
+        }
+    }
+    &__navIcon{
+        svg{
+            display: flex;
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+}
+
+.user{
+    &__name{
+        letter-spacing: 0.8px;
+    }
+    &__type{
+        font-size: 1rem;
+        opacity: 0.5;
+        letter-spacing: 0.8px;
+    }
+}

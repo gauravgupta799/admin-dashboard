@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import "./assets/scss/main.scss";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import AccessControl from "./Pages/AccessControl/AccessControl";
@@ -11,12 +12,14 @@ import Footer from "./Layout/Footer/Footer";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+  
   return (
     <div className="app">
       <BrowserRouter>
-          <Header/>
+          <SideMenu isSideMenuOpen={isSideMenuOpen}/>
           <div className="app__container">
-            <SideMenu/>
+            <Header isSideMenuOpen ={isSideMenuOpen} setIsSideMenuOpen ={setIsSideMenuOpen}/>
             <Routes>
               <Route exact path="/" element={<Dashboard/>}/>
               <Route path="/user" element={<User/>}/>
@@ -25,8 +28,8 @@ function App() {
               <Route path="/invoice" element={<Invoice/>}/>
               <Route path="/calender" element={<Calender/>}/>
             </Routes>
-          </div>
           <Footer/>
+          </div>
       </BrowserRouter>
     </div>
   );

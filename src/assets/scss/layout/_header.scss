@@ -6,27 +6,36 @@
 
 .header{
     @include transition(all, 0.3s, ease-out);
+    width: 100%;
+    padding-block: 0.5em;
+    background-color: rgb(237, 236, 234);
+    background: #28243D;
+    box-shadow: 0px 2px 0px  rgba(0, 0, 0, 0.15);
 
-    &.is-sticky{
+    &--sticky{
         position: sticky;
         inset: 0;
         width: 100%;
-        z-index: 9;
+        z-index: 8;
         @include transition(all, 0.3s, ease-out);
+        
     }
     &__container{
-        height: 60px;
         width: 100%;
-        background-color: antiquewhite;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-inline: 1em;
+        // position: relative;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        gap:1rem;
     }
     &__menu{
         display: flex;
         align-items: center;
-        gap:1rem;
+        gap:1.5rem;
     }
     &__list{
         &:hover{
@@ -65,13 +74,45 @@
         display: flex;
         align-items: center;
         gap:1rem;
+        padding-left: 1.2em;
     }
     &__img{
-        width: rem(40);
+        width: rem(30);
+        @include breakpoint-md{
+            width: rem(35);
+        }
+        @include breakpoint-lg{
+            width: rem(40);
+        }
     }
     &__brand{
-        font-size:rem(28);
+        font-size:rem(20);
         font-family: $ff-medium;
         opacity: 0.8;
+        color:#fff;
+        @include breakpoint-sm{
+            font-size:rem(22);
+        }
+        @include breakpoint-md{
+            font-size:rem(24);
+        }
+        @include breakpoint-lg{
+            font-size:rem(26);
+        }
+        @include breakpoint-xl{
+            font-size:rem(28);
+        }
+    }
+}
+
+
+.hamburger{
+    &__wrapper{
+        @include breakpoint-lg{
+            display: none;
+        }
+        span{
+            display: flex;
+        }
     }
 }
